@@ -30,16 +30,7 @@ future_events_names = [i['event_name'] for i in events if i['event_date']>=date.
 print(future_events_names)
 data_path = str(r'C:\Users\david\Documents\Betting\Models\Eurovision\Eurovision Data')
 today = date.today().strftime("%d%m%Y")
-youtube_api_key = 'AIzaSyB7eto6dOr9FOczpS1o_sBlO7bHSAce8uA'
-#https://stackoverflow.com/questions/63211098/youtube-data-api-the-request-cannot-be-completed-because-you-have-exceeded-your
-exchange_api_key = 'cVbIW2A1QobjAdHV'
-spotify_client_id='f1518d69a48e4f12b09e659afc86b830'
-spotify_client_secret='601ed38dcef5467fbfdd620a7d051bf8'
-twitter_consumer_key = "HGtiyj9GOgJc7Dn3RCMaiQTbH"
-twitter_consumer_secret = "S3JmDuhUcmvX8aEnb3kse3BDQuT3t5Bgfx107MfKySUf8VsXSW"
-twitter_access_key = "2507444200-B2hIJop5O9g2zijYaIkrI89kMnyU9ZHVMOTGL4E"
-twitter_access_secret = "foN3F1uqs9Pjj5fXfh7Mbh91oHEglWzQgsAvbuAxWFlEP"
-google_sheets_key = 'eurovision-246416-a45a4103ec0b.json'
+
 #all_api_ids = pd.read_excel(str(data_path + '\\Code\\IDs\\api_ids.xlsx'), sheet_name = future_events_names)
 #all_market_ids = pd.read_excel(str(data_path + '\\Code\\IDs\\exchange_ids.xlsx'), sheet_name = future_events_names)
 all_api_ids, all_market_ids = database_functions.read_ids(google_sheets_key, future_events_names)
